@@ -5,13 +5,13 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "_CLAB_VERSION": "0.44.0"
+            "_CLAB_VERSION": "0.45.1"
         }
     },
     "features": {
         // Containerlab will run in a docker-in-docker container
         // it is also possible to use docker-outside-docker feature
-        "ghcr.io/devcontainers/features/docker-in-docker:2.2.0": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2.5.0": {
             "version": "latest"
         }
     },

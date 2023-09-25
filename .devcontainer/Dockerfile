@@ -1,6 +1,6 @@
 # The devcontainer will be based on Python 3.9
 # The base container already has entrypoint, vscode user account, etc. out of the box
-FROM mcr.microsoft.com/devcontainers/python:0-3.9-bullseye
+FROM mcr.microsoft.com/devcontainers/python:3.11-bullseye
 
 # containelab version will be set in devcontainer.json
 ARG _CLAB_VERSION

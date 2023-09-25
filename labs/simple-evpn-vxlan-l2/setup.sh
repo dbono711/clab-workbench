@@ -1,14 +1,15 @@
 #!/bin/bash
 CLIENT_CFG_DIR=./clients
+CLAB=clab-simple-evpn-vxlan-l2
 
 configure_SWITCH() {
-  docker cp $1/$1.sh clab-my-frr-clos01-$1:/tmp/
-  docker exec clab-my-frr-clos01-$1 bash /tmp/$1.sh 2>/dev/null
+  docker cp $1/$1.sh $CLAB-$1:/tmp/
+  docker exec $CLAB-$1 bash /tmp/$1.sh 2>/dev/null
 }
 
 configure_CLIENT() {
-  docker cp $CLIENT_CFG_DIR/$1.sh clab-my-frr-clos01-$1:/tmp/
-  docker exec clab-my-frr-clos01-$1 bash /tmp/$1.sh 2>/dev/null
+  docker cp $CLIENT_CFG_DIR/$1.sh $CLAB-$1:/tmp/
+  docker exec $CLAB-$1 bash /tmp/$1.sh 2>/dev/null
 }
 
 echo

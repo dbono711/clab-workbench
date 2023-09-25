@@ -1,7 +1,7 @@
-name: my-frr-clos01
+name: simple-evpn-vxlan-l2
 
 mgmt:
-  network: br-frr-clos01
+  network: br-simple-evpn-vxlan-l2
   ipv4-subnet: 172.28.1.0/24
 
 topology:
@@ -43,6 +43,7 @@ topology:
         - leaf02/frr.conf:/etc/frr/frr.conf
         - leaf02/vtysh.conf:/etc/frr/vtysh.conf
 
+    # clients
     client1:
       kind: linux
       image: wbitt/network-multitool:alpine-extra

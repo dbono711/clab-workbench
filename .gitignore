@@ -1,3 +1,4 @@
 *.code-workspace
 clab-*
-.DS_storex
+.DS_store
+.setup.yml.bak
